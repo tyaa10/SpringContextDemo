@@ -2,6 +2,7 @@ package org.tyaa.springcontextdemo.entity;
 
 import org.springframework.stereotype.Component;
 
+/* Annotations approach */
 @Component("weapon-sword")
 public class Weapon {
 
