@@ -11,6 +11,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		//1. https://maven.apache.org/plugins/maven-jar-plugin/
+		//2. Rightclick on your pom.xml and choose "Run as" -> "Maven build.." and put in Goals:package. If you now select "run" (CTRL + F11) it will run automatically if you select these run configuration.
+		
 		/* Annotations approach */
 		
 		/*ApplicationContext context =
