@@ -11,8 +11,23 @@ import org.tyaa.springcontextdemo.entity.Weapon;
 public class AppConfig {
 
 	@Bean
-	public Unit getUnit() {
-		return new Unit();
+	public Unit kingUnit() {
+		Unit u = new Unit();
+		return u;
+	}
+
+	@Bean
+	public Unit dragonUnit() {
+		Unit u = new Unit();
+		u.name = "Dragon";
+		return u;
+	}
+
+	@Bean
+	public Unit knightUnit() {
+		Unit u = new Unit();
+		u.name = "Knight";
+		return u;
 	}
 	
 	@Bean(name = "weapon-sword")
@@ -23,7 +38,7 @@ public class AppConfig {
 	}
         
         @Bean("weapon-axe")
-        @Qualifier(value = "weapon-axe")
+        @Qualifier(value = "weapon-axe2")
 	public Object getWeapon() {
 		Weapon weapon = new Weapon();
 		weapon.name = "axe";
@@ -31,7 +46,7 @@ public class AppConfig {
 	}
 	
 	@Bean("warrior")
-	public Object getWarrior(@Qualifier(value = "weapon-axe") Weapon _weapon) {
+	public Object getWarrior(@Qualifier(value = "weapon-axe2") Weapon _weapon) {
 		Unit unit = new Unit();
 		unit.name = _weapon.getName() + "sman";
 		return unit;
