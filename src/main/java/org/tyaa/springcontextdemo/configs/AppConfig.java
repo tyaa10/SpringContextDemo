@@ -31,22 +31,22 @@ public class AppConfig {
 	}
 	
 	@Bean(name = "weapon-sword")
-	public Object getSword() {
+	public Weapon getSword() {
 		Weapon weapon = new Weapon();
 		weapon.name = "sword";
 		return weapon;
 	}
         
-        @Bean("weapon-axe")
-        @Qualifier(value = "weapon-axe2")
-	public Object getWeapon() {
+	@Bean("weapon-axe")
+	// @Qualifier(value = "weapon-axe")
+	public Weapon getWeapon() {
 		Weapon weapon = new Weapon();
 		weapon.name = "axe";
 		return weapon;
 	}
 	
 	@Bean("warrior")
-	public Object getWarrior(@Qualifier(value = "weapon-axe2") Weapon _weapon) {
+	public Object getWarrior(@Qualifier(value = "weapon-axe") Weapon _weapon) {
 		Unit unit = new Unit();
 		unit.name = _weapon.getName() + "sman";
 		return unit;

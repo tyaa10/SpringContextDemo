@@ -16,16 +16,16 @@ public class Main {
 		
 		/* Annotations approach */
 		
-		/*ApplicationContext context =
+		ApplicationContext context =
 				new AnnotationConfigApplicationContext("org.tyaa.springcontextdemo.entity");
 		
 		Unit unit = context.getBean(Unit.class);
 		Building building = (Building) context.getBean("building");
-		Weapon weapon = context.getBean("weapon-sword", Weapon.class);
+		Weapon weapon = context.getBean("weapon-spear", Weapon.class);
 
 		System.out.println(unit.getName());
 		System.out.println(building.getName());
-		System.out.println(weapon.getName());*/
+		System.out.println(weapon.getName());
 		
 		
 		/* Java config approach */
@@ -35,13 +35,13 @@ public class Main {
 		//or package name
 		//or several package names separated by comma
 		//or parent package name
-		ApplicationContext context =
+		/* ApplicationContext context =
 				new AnnotationConfigApplicationContext(AppConfig.class);
 		//Unit unit = context.getBean("dragonUnit", Unit.class);
 		//Weapon weapon = context.getBean("weapon-sword", Weapon.class);
 		Unit unit = context.getBean("warrior", Unit.class);
 		
-		System.out.println(unit.getName());
+		System.out.println(unit.getName()); */
 		//System.out.println(weapon.getName());
 	}
 }
