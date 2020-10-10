@@ -1,6 +1,5 @@
 package org.tyaa.springcontextdemo.configs;
 
-import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -46,7 +45,7 @@ public class AppConfig {
 	}
 	
 	@Bean("warrior")
-	public Object getWarrior(@Qualifier(value = "weapon-axe") Weapon _weapon) {
+	public Object getWarrior(@Qualifier(value = "weapon-sword") Weapon _weapon) {
 		Unit unit = new Unit();
 		unit.name = _weapon.getName() + "sman";
 		return unit;

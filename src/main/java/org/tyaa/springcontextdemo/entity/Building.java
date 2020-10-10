@@ -1,10 +1,11 @@
 package org.tyaa.springcontextdemo.entity;
 
+import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.stereotype.Component;
 
 /* Annotations approach */
 @Component
-public class Building {
+public abstract class Building {
 
 	public String name;
 	
@@ -12,4 +13,7 @@ public class Building {
 		// TODO Auto-generated method stub
 		return name;
 	}
+
+	@Lookup
+	public abstract Unit produceUnit();
 }
